@@ -1,4 +1,5 @@
-// All website content, images, and configuration
+import logo from "./images/logo.png"
+import heroImage from "./images/banner.webp"
 export const siteConfig = {
   // Site metadata
   meta: {
@@ -30,12 +31,10 @@ export const siteConfig = {
 
   // Images
   images: {
-    logo: "/images/kyco-logo.png",
+    logo,
     heroWorker:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e3fe042e-eaef-4d61-9b89-ea54c67144da.png-nfWf2qlI7LumqsAt2srFdLqQ6JoPH0.jpeg",
-    heroImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e3fe042e-eaef-4d61-9b89-ea54c67144da.png-Bcxguc5xEs2LSQyitvAw5ONk7RHdQk.jpeg",
-    heroBg: "/images/hero-bg.jpg",
+    heroImage,
     serviceExcavation: "/images/service-excavation.jpg",
     serviceRoofing: "/images/service-roofing.jpg",
     serviceElectrical: "/images/service-electrical.jpg",

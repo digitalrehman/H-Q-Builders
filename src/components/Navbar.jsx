@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
@@ -40,7 +38,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <div className="text-2xl font-bold text-red-600">KYCO</div>
+              <img className="w-24" src={siteConfig.images.logo} alt="logo" />
             </Link>
 
             {/* Desktop Navigation */}

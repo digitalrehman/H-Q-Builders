@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
 import ContactForm from "../components/ContactForm"
-import {siteConfig}  from "../assets/config"
+import { siteConfig } from "../assets/config"
 
 
 const Home = () => {
@@ -48,62 +48,63 @@ const Home = () => {
         <title>{siteConfig.meta.title}</title>
         <meta name="description" content={siteConfig.meta.description} />
       </Helmet>
+      {/* hero section  */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+  {/* Background Pattern */}
+  <div className="absolute h-screen inset-0 background"></div>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 background"></div>
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+
+      {/* Left Side - Text */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-white flex-1"
+      >
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          {siteConfig.hero.title}
+        </h1>
+        <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-200">
+          {siteConfig.hero.subtitle}
+        </p>
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          onClick={() => setShowQuoteForm(true)}
+          className="bg-red-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          {siteConfig.hero.buttonText}
+        </motion.button>
+      </motion.div>
+
+      {/* Right Side - Image bottom-aligned */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative flex-1 w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-end"
+      >
+        <div className="relative w-full h-full">
+          <img
+            src={siteConfig.images.heroImage}
+            alt="Professional construction worker"
+            className="absolute bottom-0 left-0 w-full h-full object-cover object-bottom rounded-lg shadow-2xl"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-blue-900/20 rounded-lg"></div>
         </div>
+      </motion.div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    </div>
+  </div>
+</section>
 
-            {/* Right Side - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-white"
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                {siteConfig.hero.title}
-              </h1>
-              <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-200">
-                {siteConfig.hero.subtitle}
-              </p>
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                onClick={() => setShowQuoteForm(true)}
-                className="bg-red-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                {siteConfig.hero.buttonText}
-              </motion.button>
-            </motion.div>
 
-              {/* Left Side - Image */}
-              <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="relative">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e3fe042e-eaef-4d61-9b89-ea54c67144da.png-nfWf2qlI7LumqsAt2srFdLqQ6JoPH0.jpeg"
-                  alt="Professional construction worker"
-                  className="w-full h-[600px] object-cover object-center rounded-lg shadow-2xl"
-                  loading="eager"
-                />
-                {/* Overlay gradient for better image integration */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-blue-900/20 rounded-lg"></div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+
+
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
