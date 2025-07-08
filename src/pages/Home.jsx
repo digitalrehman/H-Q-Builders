@@ -49,11 +49,11 @@ const Home = () => {
         <meta name="description" content={siteConfig.meta.description} />
       </Helmet>
       {/* hero section  */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative w-[85%] mx-auto min-h-screen border flex items-center overflow-hidden">
   {/* Background Pattern */}
   <div className="absolute h-screen inset-0 background"></div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
       {/* Left Side - Text */}
@@ -63,7 +63,7 @@ const Home = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-white flex-1"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-wider">
           {siteConfig.hero.title}
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-200">
@@ -87,14 +87,13 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         className="relative flex-1 w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-end"
       >
-        <div className="relative w-full h-full">
+        <div className="relative w-full">
           <img
             src={siteConfig.images.heroImage}
             alt="Professional construction worker"
-            className="absolute bottom-0 left-0 w-full h-full object-cover object-bottom rounded-lg shadow-2xl"
+            className="absolute bottom-0 left-0 w-full h-[500px] object-cover object-bottom"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-blue-900/20 rounded-lg"></div>
         </div>
       </motion.div>
 
@@ -102,13 +101,9 @@ const Home = () => {
   </div>
 </section>
 
-
-
-
-
       {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-red-600 ">
+        <div className="w-[85%] py-16 bg-orange-200 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {siteConfig.stats.map((stat, index) => (
               <motion.div

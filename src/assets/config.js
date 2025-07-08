@@ -53,7 +53,7 @@ export const siteConfig = {
     title: "COMMITTED TO QUALITY",
     subtitle:
       "Every step of the way in everything we touch, from our first meeting with you to the final walk-through, we are committed to your complete satisfaction.",
-    buttonText: "Request Our Services",
+    buttonText: "Explore Our Services",
   },
 
   // Stats section
