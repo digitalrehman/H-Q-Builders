@@ -4,11 +4,11 @@ import { siteConfig } from "../assets/config"
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className=" md:w-11/12 w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold text-red-600 mb-4">KYCO</div>
+            <img src={siteConfig.images.logo} alt="logo" className="w-40 invert" />
             <p className="text-gray-300 mb-6 max-w-md">{siteConfig.footer.description}</p>
             <div className="space-y-2">
               <p className="text-gray-300">
@@ -54,7 +54,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} KYCO Construction. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()}  H&K Builders Construction. All rights reserved.</p>
 
           {/* Social Links */}
           <div className="flex space-x-4 mt-4 md:mt-0">

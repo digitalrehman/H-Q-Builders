@@ -1,9 +1,9 @@
 {
-  "name": "kyco-construction-website",
+  "name": " H&K Builders-construction-website",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Professional construction business website for KYCO Construction - Built with React.js and Tailwind CSS",
+  "description": "Professional construction business website for  H&K Builders Construction - Built with React.js and Tailwind CSS",
   "keywords": [
     "construction",
     "business-website",
@@ -12,9 +12,9 @@
     "responsive",
     "professional"
   ],
-  "author": "KYCO Construction",
+  "author": " H&K Builders Construction",
   "license": "MIT",
-  "homepage": "https://kyco-construction.com",
+  "homepage": "https:// H&K Builders-construction.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.20.1",
+    "swiper": "^11.2.10",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {

@@ -2,9 +2,9 @@
 
 ```
 
-# KYCO Construction Website
+#  H&K Builders Construction Website
 
-A professional, fully responsive business website built with React.js and Tailwind CSS for KYCO Construction company.
+A professional, fully responsive business website built with React.js and Tailwind CSS for  H&K Builders Construction company.
 
 ## 🚀 Features
 
@@ -28,7 +28,7 @@ A professional, fully responsive business website built with React.js and Tailwi
 ## 📁 Project Structure
 
 \`\`\`
-kyco-website/
+ H&K Builders-website/
 ├── public/
 │   ├── images/          # Website images
 │   └── favicon.ico
@@ -67,8 +67,8 @@ kyco-website/
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/kyco-construction/website.git
-   cd kyco-website
+   git clone https://github.com/ H&K Builders-construction/website.git
+   cd  H&K Builders-website
    \`\`\`
 2. **Install dependencies**
    \`\`\`bash
@@ -234,12 +234,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-**KYCO Construction**
+** H&K Builders Construction**
 
-- Website: https://kyco-construction.com
-- Email: info@kycoconstruction.com
+- Website: https:// H&K Builders-construction.com
+- Email: info@ H&K Buildersconstruction.com
 - Phone: +1 (555) 123-4567
 
 ---
 
-Built with ❤️ for KYCO Construction
+Built with ❤️ for  H&K Builders Construction

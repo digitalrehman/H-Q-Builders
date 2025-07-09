@@ -11,7 +11,7 @@ const About = () => {
         <title>About Us - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Learn about KYCO Construction's history, values, and commitment to quality construction services."
+          content="Learn about  H&K Builders Construction's history, values, and commitment to quality construction services."
         />
       </Helmet>
 
@@ -24,7 +24,7 @@ const About = () => {
 
         {/* Company Story */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -34,7 +34,7 @@ const About = () => {
               >
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                  Founded in 1998, KYCO Construction began as a small drywall installation company with a simple
+                  Founded in 1998,  H&K Builders Construction began as a small drywall installation company with a simple
                   mission: deliver quality work with integrity and professionalism. Over the past 25 years, we've grown
                   into a full-service construction company while maintaining our core values.
                 </p>
@@ -53,7 +53,7 @@ const About = () => {
               >
                 <img
                   src="/placeholder.svg?height=400&width=500"
-                  alt="KYCO Construction team"
+                  alt=" H&K Builders Construction team"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                   loading="lazy"
                 />
@@ -64,7 +64,7 @@ const About = () => {
 
         {/* Values Section */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ const About = () => {
 
         {/* Team Section */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ const About = () => {
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Meet the experienced professionals who lead KYCO Construction.
+                Meet the experienced professionals who lead  H&K Builders Construction.
               </p>
             </motion.div>
 
@@ -138,7 +138,7 @@ const About = () => {
                   name: "John Smith",
                   position: "Founder & CEO",
                   image: "/placeholder.svg?height=300&width=300",
-                  bio: "With over 30 years in construction, John founded KYCO with a vision of delivering exceptional quality and service.",
+                  bio: "With over 30 years in construction, John founded  H&K Builders with a vision of delivering exceptional quality and service.",
                 },
                 {
                   name: "Sarah Johnson",
@@ -180,7 +180,7 @@ const About = () => {
 
         {/* Stats Section */}
         <section className="py-16 bg-red-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {siteConfig.stats.map((stat, index) => (
                 <motion.div

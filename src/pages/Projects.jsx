@@ -71,7 +71,7 @@ const Projects = () => {
         <title>Projects - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Explore KYCO Construction's portfolio of completed projects including commercial, multifamily, and residential construction."
+          content="Explore  H&K Builders Construction's portfolio of completed projects including commercial, multifamily, and residential construction."
         />
       </Helmet>
 
@@ -84,7 +84,7 @@ const Projects = () => {
 
         {/* Project Categories */}
         <section className="py-8 bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="  px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
@@ -105,7 +105,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="  px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -155,7 +155,7 @@ const Projects = () => {
 
         {/* Project Stats */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="  px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -194,7 +194,7 @@ const Projects = () => {
 
         {/* CTA Section */}
         <section className="py-16 bg-red-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="  px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

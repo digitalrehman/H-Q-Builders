@@ -1,22 +1,27 @@
-import logo from "./images/logo.png"
-import heroImage from "./images/banner.webp"
+import logo from "./images/logo.png";
+import heroImage from "./images/banner.webp";
+import carpentry from "./images/service/carpentry.jpg";
+import decksandpatios from "./images/service/decksandpatios.jpg";
+import fencing from "./images/service/fencing.jpg";
+import flooring from "./images/service/flooring.jpg";
+import partnershipBg from "./images/partnership.webp";
 export const siteConfig = {
   // Site metadata
   meta: {
-    title: "KYCO - Professional Construction Services",
+    title: " H&K Builders - Professional Construction Services",
     description:
       "Committed to quality construction services including excavation, roofing, electrical, and general contracting. Experience excellence every time.",
     keywords:
       "construction, excavation, roofing, electrical, general contracting, commercial, residential, multifamily",
-    author: "KYCO Construction",
-    url: "https://kyco-construction.com",
+    author: " H&K Builders Construction",
+    url: "https:// H&K Builders-construction.com",
     image: "/images/hero-bg.jpg",
   },
 
   // Contact information
   contact: {
     phone: "+1 (555) 123-4567",
-    email: "info@kycoconstruction.com",
+    email: "info@ H&K Buildersconstruction.com",
     address: "123 Construction Ave, Builder City, BC 12345",
   },
 
@@ -42,7 +47,7 @@ export const siteConfig = {
     projectImage1: "/images/project-1.jpg",
     projectImage2: "/images/project-2.jpg",
     experienceWorker: "/images/experience-worker.jpg",
-    partnershipBg: "/images/partnership-bg.jpg",
+    partnershipBg,
     communityTeam1: "/images/community-team-1.jpg",
     communityTeam2: "/images/community-team-2.jpg",
     footerTruck: "/images/footer-truck.png",
@@ -53,56 +58,44 @@ export const siteConfig = {
     title: "COMMITTED TO QUALITY",
     subtitle:
       "Every step of the way in everything we touch, from our first meeting with you to the final walk-through, we are committed to your complete satisfaction.",
-    buttonText: "Explore Our Services",
+    buttonText: "Request a Quote",
   },
 
   // Stats section
   stats: [
-    { icon: "🏗️", number: "25+", label: "Years in Business" },
-    { icon: "📋", number: "500+", label: "Projects Completed" },
-    { icon: "👥", number: "50+", label: "Expert Team Members" },
-    { icon: "⭐", number: "100%", label: "Client Satisfaction" },
+    { icon: "🏗️", label: "Interior Services" },
+    { icon: "📋", label: "Exterior Services" },
+    { icon: "👥", label: "Jobsite Management" },
+    { icon: "⭐", label: "Equipment & Logistics" },
   ],
 
   // Services
   services: [
     {
-      title: "Excavation",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Professional excavation services for all your construction needs.",
+      title: "Carpentry",
+      image: carpentry,
     },
     {
-      title: "Roofing",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Complete roofing solutions from installation to repair.",
+      title: "Decks & Patios",
+      image: decksandpatios,
     },
     {
-      title: "Electrical",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Licensed electrical work for residential and commercial projects.",
+      title: "Fencing",
+      image: fencing,
     },
     {
-      title: "General",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Full-service general contracting for projects of all sizes.",
+      title: "Flooring",
+      image: flooring,
     },
   ],
 
-  // Recent work content
-  recentWork: {
-    title: "What Started as Drywall Became So Much More",
-    content:
-      "From our humble beginnings in drywall installation, we've grown into a full-service construction company. Our commitment to quality and customer satisfaction has driven our expansion into excavation, roofing, electrical, and general contracting services.",
-    buttonText: "View Our Work",
-    images: ["/placeholder.svg?height=250&width=300", "/placeholder.svg?height=250&width=300"],
-  },
 
   // Partnership section
   partnership: {
     title: "Where Quality Comes Standard and Relationships Come First.",
     content:
       "We believe that great construction starts with great relationships. Our team works closely with each client to understand their vision and deliver results that exceed expectations.",
-    buttonText: "Start Your Project",
+    buttonText: "Let's Build Together",
   },
 
   // Experience section
@@ -137,49 +130,49 @@ export const siteConfig = {
     {
       name: "John Smith",
       company: "ABC Corporation",
-      text: "KYCO delivered exceptional quality on our commercial project. Their attention to detail and professionalism exceeded our expectations.",
+      text: " H&K Builders delivered exceptional quality on our commercial project. Their attention to detail and professionalism exceeded our expectations.",
       rating: 5,
     },
     {
       name: "Sarah Johnson",
       company: "Homeowner",
-      text: "From start to finish, the KYCO team was professional, reliable, and delivered outstanding results on our home renovation.",
+      text: "From start to finish, the  H&K Builders team was professional, reliable, and delivered outstanding results on our home renovation.",
       rating: 5,
     },
     {
       name: "Mike Davis",
       company: "Property Manager",
-      text: "We've worked with KYCO on multiple multifamily projects. Their quality and timeliness are consistently excellent.",
+      text: "We've worked with  H&K Builders on multiple multifamily projects. Their quality and timeliness are consistently excellent.",
       rating: 5,
     },
     {
       name: "Lisa Brown",
       company: "Restaurant Owner",
-      text: "KYCO transformed our restaurant space beautifully. The project was completed on time and within budget.",
+      text: " H&K Builders transformed our restaurant space beautifully. The project was completed on time and within budget.",
       rating: 5,
     },
     {
       name: "Tom Wilson",
       company: "Office Manager",
-      text: "Professional service from consultation to completion. KYCO is our go-to contractor for all office renovations.",
+      text: "Professional service from consultation to completion.  H&K Builders is our go-to contractor for all office renovations.",
       rating: 5,
     },
     {
       name: "Jennifer Lee",
       company: "Homeowner",
-      text: "The electrical work KYCO performed was top-notch. Clean, professional, and up to all safety standards.",
+      text: "The electrical work  H&K Builders performed was top-notch. Clean, professional, and up to all safety standards.",
       rating: 5,
     },
     {
       name: "Robert Garcia",
       company: "Developer",
-      text: "KYCO has been our trusted partner on numerous development projects. Their expertise is unmatched.",
+      text: " H&K Builders has been our trusted partner on numerous development projects. Their expertise is unmatched.",
       rating: 5,
     },
     {
       name: "Amanda Taylor",
       company: "Business Owner",
-      text: "Excellent communication throughout the project. KYCO kept us informed every step of the way.",
+      text: "Excellent communication throughout the project.  H&K Builders kept us informed every step of the way.",
       rating: 5,
     },
   ],
@@ -188,16 +181,18 @@ export const siteConfig = {
   community: {
     title: "Rooted in Community",
     content:
-      "We take pride in being an active part of our local community. From supporting local charities to participating in community development projects, KYCO is committed to giving back to the neighborhoods we serve.",
+      "We take pride in being an active part of our local community. From supporting local charities to participating in community development projects,  H&K Builders is committed to giving back to the neighborhoods we serve.",
     posts: [
       {
         title: "Community Blog Post",
-        excerpt: "Learn about our latest community involvement and how we're making a difference in our local area.",
+        excerpt:
+          "Learn about our latest community involvement and how we're making a difference in our local area.",
         image: "/placeholder.svg?height=200&width=300",
       },
       {
         title: "Community Blog Post",
-        excerpt: "Discover our ongoing commitment to sustainable construction practices and community development.",
+        excerpt:
+          "Discover our ongoing commitment to sustainable construction practices and community development.",
         image: "/placeholder.svg?height=200&width=300",
       },
     ],
@@ -222,7 +217,8 @@ export const siteConfig = {
 
   // Footer
   footer: {
-    description: "KYCO is committed to delivering quality construction services with integrity and excellence.",
+    description:
+      " H&K Builders is committed to delivering quality construction services with integrity and excellence.",
     quickLinks: [
       { name: "About Us", href: "/about" },
       { name: "Services", href: "/services" },
@@ -241,4 +237,4 @@ export const siteConfig = {
       { name: "LinkedIn", href: "#", icon: "linkedin" },
     ],
   },
-}
+};

@@ -12,7 +12,7 @@ const Contact = () => {
         <title>Contact Us - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Get in touch with KYCO Construction for your next project. Contact us for a free consultation and estimate."
+          content="Get in touch with  H&K Builders Construction for your next project. Contact us for a free consultation and estimate."
         />
       </Helmet>
 
@@ -25,7 +25,7 @@ const Contact = () => {
 
         {/* Contact Information */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="  px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {[
                 {
@@ -71,7 +71,7 @@ const Contact = () => {
 
         {/* Business Hours */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="  px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

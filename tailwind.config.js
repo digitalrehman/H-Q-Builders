@@ -3,9 +3,6 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Outfit", "ui-sans-serif", "system-ui"],
-      },
       colors: {
         primary: {
           50: "#fef2f2",
