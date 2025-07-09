@@ -17,7 +17,7 @@ const Banner = ({ title, subtitle, backgroundImage, isHome = false }) => {
       <div className="absolute inset-0 bg-black bg-opacity-40" />
 
       {/* Content */}
-      <div className={`relative z-10 text-center text-white px-4 ${isHome ? "max-w-4xl" : "max-w-2xl mx-8"}`}>
+      <div className={`relative z-10 text-center text-white px-4 ${isHome ? "max-w-4xl" : "max-w-4xl mx-8"}`}>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -79,7 +79,7 @@ const Projects = () => {
         <Banner
           title="Our Projects"
           subtitle="Showcasing Excellence in Every Build"
-          backgroundImage="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514"
+          backgroundImage={siteConfig.images.project}
         />
 
         {/* Project Categories */}

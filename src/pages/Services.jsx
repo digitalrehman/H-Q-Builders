@@ -8,99 +8,124 @@ import { siteConfig } from "../assets/config";
 const Services = () => {
   const [showQuoteForm, setShowQuoteForm] = useState(false);
 
-const serviceDetails = [
-  {
-    title: "Carpentry Services",
-    description:
-      "Custom carpentry solutions for residential and commercial projects.",
-    image: siteConfig.images.carpentry,
-    features: [
-      "Custom cabinets and shelves",
-      "Door and window framing",
-      "Trim and molding installation",
-      "Deck and porch construction",
-      "Wood repairs and finishes",
-    ],
-  },
-  {
-    title: "Decks and Patios",
-    description:
-      "Beautifully designed and durable decks and patios for outdoor living.",
-    image: siteConfig.images.decksandpatios,
-    features: [
-      "Wood and composite decking",
-      "Patio pavers and stones",
-      "Pergolas and gazebos",
-      "Waterproofing and sealing",
-      "Custom outdoor designs",
-    ],
-  },
-  {
-    title: "Fencing Solutions",
-    description:
-      "Secure and stylish fencing options for all types of properties.",
-    image: siteConfig.images.fencing,
-    features: [
-      "Wood, vinyl, and chain-link fencing",
-      "Fence installation and repair",
-      "Privacy and security fencing",
-      "Gate installation",
-      "Decorative fencing styles",
-    ],
-  },
-  {
-    title: "Flooring Installation",
-    description:
-      "Professional flooring services to enhance the look and feel of any space.",
-    image: siteConfig.images.flooring,
-    features: [
-      "Hardwood and laminate installation",
-      "Tile and vinyl flooring",
-      "Subfloor preparation",
-      "Repairs and refinishing",
-      "Commercial and residential solutions",
-    ],
-  },
-  {
-    title: "Junk Removal",
-    description:
-      "Fast and reliable junk removal for homes, offices, and construction sites.",
-    image: siteConfig.images.junkremoval,
-    features: [
-      "Furniture and appliance removal",
-      "Construction debris cleanup",
-      "Yard waste hauling",
-      "Garage and basement cleanouts",
-      "Eco-friendly disposal",
-    ],
-  },
-  {
-    title: "Painting Services",
-    description:
-      "Interior and exterior painting services that bring your spaces to life.",
-    image: siteConfig.images.painting,
-    features: [
-      "Interior wall and ceiling painting",
-      "Exterior painting and prep",
-      "Staining and sealing",
-      "Drywall patching and repair",
-      "Color consultation",
-    ],
-  },
-  {
-    title: "Landscaping & Maintenance",
-    description:
-      "Transform your outdoor space with professional landscaping solutions.",
-    image: siteConfig.images.landscaping,
-    features: [
-      "Lawn mowing and edging",
-      "Tree and shrub trimming",
-      "Mulching and planting",
-      "Irrigation system setup",
-      "Seasonal yard cleanups",
-    ],
-  },
-];
+  const serviceDetails = [
+    {
+      title: "Carpentry Services",
+      description:
+        "Custom carpentry solutions for residential and commercial projects.",
+      image: siteConfig.images.carpentry,
+      features: [
+        "Custom cabinets and shelves",
+        "Door and window framing",
+        "Trim and molding installation",
+        "Deck and porch construction",
+        "Wood repairs and finishes",
+      ],
+    },
+    {
+      title: "Decks and Patios",
+      description:
+        "Beautifully designed and durable decks and patios for outdoor living.",
+      image: siteConfig.images.decksandpatios,
+      features: [
+        "Wood and composite decking",
+        "Patio pavers and stones",
+        "Pergolas and gazebos",
+        "Waterproofing and sealing",
+        "Custom outdoor designs",
+      ],
+    },
+    {
+      title: "Fencing Solutions",
+      description:
+        "Secure and stylish fencing options for all types of properties.",
+      image: siteConfig.images.fencing,
+      features: [
+        "Wood, vinyl, and chain-link fencing",
+        "Fence installation and repair",
+        "Privacy and security fencing",
+        "Gate installation",
+        "Decorative fencing styles",
+      ],
+    },
+    {
+      title: "Flooring Installation",
+      description:
+        "Professional flooring services to enhance the look and feel of any space.",
+      image: siteConfig.images.flooring,
+      features: [
+        "Hardwood and laminate installation",
+        "Tile and vinyl flooring",
+        "Subfloor preparation",
+        "Repairs and refinishing",
+        "Commercial and residential solutions",
+      ],
+    },
+    {
+      title: "Junk Removal",
+      description:
+        "Fast and reliable junk removal for homes, offices, and construction sites.",
+      image: siteConfig.images.junkremoval,
+      features: [
+        "Furniture and appliance removal",
+        "Construction debris cleanup",
+        "Yard waste hauling",
+        "Garage and basement cleanouts",
+        "Eco-friendly disposal",
+      ],
+    },
+    {
+      title: "Painting Services",
+      description:
+        "Interior and exterior painting services that bring your spaces to life.",
+      image: siteConfig.images.painting,
+      features: [
+        "Interior wall and ceiling painting",
+        "Exterior painting and prep",
+        "Staining and sealing",
+        "Drywall patching and repair",
+        "Color consultation",
+      ],
+    },
+    {
+      title: "Landscaping & Maintenance",
+      description:
+        "Transform your outdoor space with professional landscaping solutions.",
+      image: siteConfig.images.landscaping,
+      features: [
+        "Lawn mowing and edging",
+        "Tree and shrub trimming",
+        "Mulching and planting",
+        "Irrigation system setup",
+        "Seasonal yard cleanups",
+      ],
+    }, {
+      title: "Roofing Services",
+      description:
+        "Reliable roofing solutions for both residential and commercial properties.",
+      image: siteConfig.images.roofing,
+      features: [
+        "Shingle and metal roofing installation",
+        "Roof inspections and leak detection",
+        "Storm damage repairs",
+        "Flat and sloped roofing systems",
+        "Gutter and downspout services",
+      ],
+    },
+    {
+      title: "Bathroom Remodeling",
+      description:
+        "Transform your bathrooms with modern, functional, and stylish renovations.",
+      image: siteConfig.images.bathroom,
+      features: [
+        "Shower and bathtub upgrades",
+        "Vanity and sink installation",
+        "Tiling and waterproofing",
+        "Lighting and ventilation improvements",
+        "Custom bathroom designs",
+      ],
+    },
+  ];
 
 
   return (
@@ -115,8 +140,8 @@ const serviceDetails = [
 
       <div className="pt-16 lg:pt-20">
         <Banner
-          title="Our Services"
-          subtitle="Comprehensive Construction Solutions for Every Need"
+          title="Built to Inspire. Designed to Last"
+          subtitle="Reliable Remodeling Solutions — From Kitchens to Full Home Makeovers"
           backgroundImage={siteConfig.images.servicebanner}
         />
 
@@ -134,9 +159,7 @@ const serviceDetails = [
                 What We Do
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From excavation to final finishes, we provide comprehensive
-                construction services that meet the highest standards of quality
-                and professionalism.
+                At H&K Builders, we handle every aspect of your renovation with precision and care. Explore our wide range of remodeling services designed to enhance your home’s beauty, function, and value — all delivered with trusted local expertise.
               </p>
             </motion.div>
 
@@ -148,15 +171,14 @@ const serviceDetails = [
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                  }`}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                    }`}
                 >
                   <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
                     <img
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image}
                       alt={service.title}
-                      className="w-full h-80 object-cover rounded-lg shadow-lg"
+                      className="w-full h-96 object-cover rounded-lg shadow-lg"
                       loading="lazy"
                     />
                   </div>
@@ -223,31 +245,43 @@ const serviceDetails = [
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   step: "01",
-                  title: "Consultation",
+                  title: "Initial Consultation",
                   description:
-                    "We meet with you to understand your project requirements and vision.",
+                    "We start by understanding your goals, needs, and vision for the project.",
                 },
                 {
                   step: "02",
-                  title: "Planning",
+                  title: "Design & Planning",
                   description:
-                    "Our team develops a detailed project plan with timelines and specifications.",
+                    "Our experts create a tailored design and develop a detailed plan.",
                 },
                 {
                   step: "03",
-                  title: "Execution",
+                  title: "Proposal & Contract",
                   description:
-                    "We execute the project with precision, keeping you informed every step of the way.",
+                    "We present a transparent proposal and finalize the agreement to begin.",
                 },
                 {
                   step: "04",
-                  title: "Completion",
+                  title: "Construction",
                   description:
-                    "Final walkthrough and handover of your completed project.",
+                    "Our skilled team brings the plan to life with quality materials and workmanship.",
+                },
+                {
+                  step: "05",
+                  title: "Quality Assurance",
+                  description:
+                    "We inspect and ensure everything meets our high standards before delivery.",
+                },
+                {
+                  step: "06",
+                  title: "Project Completion",
+                  description:
+                    "We walk you through the final results and hand over a completed, beautiful project.",
                 },
               ].map((process, index) => (
                 <motion.div
@@ -267,6 +301,7 @@ const serviceDetails = [
                   <p className="text-gray-600">{process.description}</p>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>

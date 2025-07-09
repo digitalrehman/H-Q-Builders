@@ -9,7 +9,17 @@ import servicebanner from "./images/service/servicebanner.jpg";
 import junkremoval from "./images/service/junkremoval.jpg";
 import landscaping from "./images/service/landscaping.jpg";
 import painting from "./images/service/painting.jpg";
+import bathroom from "./images/service/Bathroom.jpeg";
+import roofing from "./images/service/roofing.webp";
 import about from "./images/about.jpg";
+import project from "./images/project.jpg";
+import commercial from "./images/commercial.png";
+import equipment from "./images/equipment.png";
+import exterior from "./images/exterior.png";
+import mangment from "./images/mangment.png";
+import interior from "./images/interior.png";
+import multifamily from "./images/multifamily.png";
+import residental from "./images/residental.png";
 export const siteConfig = {
   // Site metadata
   meta: {
@@ -25,9 +35,9 @@ export const siteConfig = {
 
   // Contact information
   contact: {
-    phone: "+1 (555) 123-4567",
-    email: "info@ H&K Buildersconstruction.com",
-    address: "123 Construction Ave, Builder City, BC 12345",
+    phone: "585-981-8240 / 469-416-1014",
+    email: "hkbuilders11@gmail.com",
+    address: "13071 Darkwood, frisco, tx",
   },
 
   // Navigation
@@ -42,19 +52,9 @@ export const siteConfig = {
   // Images
   images: {
     logo,
-    heroWorker:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e3fe042e-eaef-4d61-9b89-ea54c67144da.png-nfWf2qlI7LumqsAt2srFdLqQ6JoPH0.jpeg",
     heroImage,
-    serviceExcavation: "/images/service-excavation.jpg",
-    serviceRoofing: "/images/service-roofing.jpg",
-    serviceElectrical: "/images/service-electrical.jpg",
-    serviceGeneral: "/images/service-general.jpg",
-    projectImage1: "/images/project-1.jpg",
-    projectImage2: "/images/project-2.jpg",
-    experienceWorker: "/images/experience-worker.jpg",
+    project,
     partnershipBg,
-    communityTeam1: "/images/community-team-1.jpg",
-    communityTeam2: "/images/community-team-2.jpg",
     servicebanner,
     carpentry,
     decksandpatios,
@@ -63,23 +63,29 @@ export const siteConfig = {
     junkremoval,
     landscaping,
     painting,
-    about
+    about,
+    commercial,
+    bathroom,
+    roofing,
+    multifamily,
+    residental,
   },
 
   // Hero section content
   hero: {
-    title: "COMMITTED TO QUALITY",
+    title: "Transforming Houses Into Dream Homes with H&K Builders ",
+    subHeading: "Trusted Remodeling Experts in Dallas, Frisco & Beyond",
     subtitle:
-      "Every step of the way in everything we touch, from our first meeting with you to the final walk-through, we are committed to your complete satisfaction.",
+      "From modern kitchens and luxurious bathrooms to full home renovations, H&K Builders delivers quality craftsmanship with trusted results. Proudly serving Dallas, Frisco, and surrounding Texas cities — we bring your ideas to life, one project at a time.",
     buttonText: "Request a Quote",
   },
 
   // Stats section
   stats: [
-    { icon: "🏗️", label: "Interior Services" },
-    { icon: "📋", label: "Exterior Services" },
-    { icon: "👥", label: "Jobsite Management" },
-    { icon: "⭐", label: "Equipment & Logistics" },
+    { icon: interior, label: "Interior Services" },
+    { icon: exterior, label: "Exterior Services" },
+    { icon: mangment, label: "Jobsite Management" },
+    { icon: equipment, label: "Equipment & Logistics" },
   ],
 
   // Services
@@ -102,12 +108,11 @@ export const siteConfig = {
     },
   ],
 
-
   // Partnership section
   partnership: {
-    title: "Where Quality Comes Standard and Relationships Come First.",
+    title: "Built on Trust, Backed by Experience",
     content:
-      "We believe that great construction starts with great relationships. Our team works closely with each client to understand their vision and deliver results that exceed expectations.",
+      "At H&K Builders, we don’t just remodel — we build lasting relationships. With years of hands-on experience and a trusted partnership with URD Construction in Dallas, we’ve proudly delivered reliable, high-quality results across hundreds of homes. Your vision is in safe, skilled hands.",
     buttonText: "Let's Build Together",
   },
 
@@ -123,17 +128,17 @@ export const siteConfig = {
   categories: [
     {
       title: "Commercial",
-      icon: "🏢",
+      icon: commercial,
       description: "Professional commercial construction services",
     },
     {
       title: "Multifamily",
-      icon: "🏘️",
+      icon: multifamily,
       description: "Specialized multifamily residential projects",
     },
     {
       title: "Residential",
-      icon: "🏠",
+      icon: residental,
       description: "Custom residential construction and renovation",
     },
   ],

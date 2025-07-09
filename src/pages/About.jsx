@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
 import Banner from "../components/Banner"
 import { siteConfig } from "../assets/config"
+import { User } from "lucide-react"
 
 const About = () => {
   return (
@@ -22,45 +23,43 @@ const About = () => {
           backgroundImage={siteConfig.images.about}
         />
 
-        {/* Company Story */}
-        <section className="py-16 bg-white">
-          <div className="px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-                <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                  Founded in 1998,  H&K Builders Construction began as a small drywall installation company with a simple
-                  mission: deliver quality work with integrity and professionalism. Over the past 25 years, we've grown
-                  into a full-service construction company while maintaining our core values.
-                </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Today, we specialize in excavation, roofing, electrical work, and general contracting for commercial,
-                  multifamily, and residential projects. Our team of 50+ skilled professionals brings decades of
-                  combined experience to every project we undertake.
-                </p>
-              </motion.div>
+      {/* Company Story Section */}
+<section className="py-16 bg-white">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      {/* Main Heading */}
+      <h2 className="text-4xl font-bold text-gray-900 text-center mb-10">
+        Our Story
+      </h2>
 
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=" H&K Builders Construction team"
-                  className="w-full h-96 object-cover rounded-lg shadow-lg"
-                  loading="lazy"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </section>
+      {/* Subsection 1 */}
+      <div className="mb-10">
+        <h3 className="text-2xl font-semibold text-red-600 mb-4">
+          Where It All Began – Pennsylvania
+        </h3>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          Our story started over 7 years ago in Pennsylvania, where construction was more than a job — it was part of our family’s everyday life. What began as a small, family-run operation quickly grew into a trusted name in local remodeling. We earned our reputation by staying true to our values: honest work, skilled craftsmanship, and treating every home like it was our own. Those early years laid the foundation for everything H&K Builders stands for today.
+        </p>
+      </div>
+
+      {/* Subsection 2 */}
+      <div>
+        <h3 className="text-2xl font-semibold text-red-600 mb-4">
+          A New Chapter – Texas
+        </h3>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          Three years ago, we brought our experience and dedication to Texas, planting new roots in Dallas, Frisco, and surrounding areas. Since then, H&K Builders has proudly continued the family legacy — now with a broader reach and even stronger commitment to quality. In every project, big or small, we bring the same passion that started it all back in Pennsylvania. Today, we’re not just building homes — we’re building trust, one remodel at a time.
+        </p>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
 
         {/* Values Section */}
         <section className="py-16 bg-gray-50">
@@ -161,12 +160,6 @@ const About = () => {
                   viewport={{ once: true }}
                   className="bg-gray-50 rounded-lg overflow-hidden shadow-md"
                 >
-                  <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                     <p className="text-red-600 font-semibold mb-3">{member.position}</p>
@@ -178,26 +171,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-red-600">
-          <div className="px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-              {siteConfig.stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-white"
-                >
-                  <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                  <div className="text-lg">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+
       </div>
     </>
   )

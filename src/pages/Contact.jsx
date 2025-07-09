@@ -21,7 +21,7 @@ const Contact = () => {
         <Banner
           title="Contact Us"
           subtitle="Let's Discuss Your Next Project"
-          backgroundImage={siteConfig.images.about}
+          backgroundImage="https://images.unsplash.com/photo-1659353588059-aa687e2332e6"
         />
 
         {/* Contact Information */}
@@ -70,37 +70,7 @@ const Contact = () => {
         {/* Contact Form */}
         <ContactForm />
 
-        {/* Business Hours */}
-        <section className="py-16 bg-gray-50">
-          <div className="  px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Business Hours</h2>
-              <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-                <div className="space-y-4">
-                  {[
-                    { day: "Monday - Friday", hours: "7:00 AM - 6:00 PM" },
-                    { day: "Saturday", hours: "8:00 AM - 4:00 PM" },
-                    { day: "Sunday", hours: "Closed" },
-                  ].map((schedule, index) => (
-                    <div key={index} className="flex justify-between items-center">
-                      <span className="font-medium text-gray-900">{schedule.day}</span>
-                      <span className="text-gray-600">{schedule.hours}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <p className="text-sm text-gray-500">Emergency services available 24/7</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+       
       </div>
     </>
   )

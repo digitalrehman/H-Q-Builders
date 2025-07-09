@@ -39,19 +39,20 @@ const Home = () => {
       </Helmet>
 
       {/* hero section  */}
-      <section className="md:w-[85%] justify-between w-full min-h-screen background flex mx-auto flex-col lg:flex-row items-center overflow-hidden">
+      <section className="md:w-[85%] justify-between md:h-[90vh] w-full background flex mx-auto flex-col lg:flex-row items-center overflow-hidden">
         <div className="h-[50vh] bg-red-600 md:block hidden absolute -z-10 w-full bottom-0 left-0" />
         {/* Left Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-white lg:w-1/2 w-full md:h-full flex flex-col justify-center pt-32 lg:pt-24 items-start px-6 lg:pl-12"
+          className="text-white lg:w-[55%] w-full md:h-full flex flex-col justify-center pt-32 lg:pt-24 items-start px-6 lg:pl-12"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-wider">
+          <h1 className="text-4xl uppercase md:text-[42px] 2xl:text-6xl font-bold mb-4">
             {siteConfig.hero.title}
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-200">
+          <h2 className="text-base  md:text-xl xl:text-2xl font-bold mb-4 leading-relaxed text-gray-200">{siteConfig.hero.subHeading}</h2>
+          <p className="text-md md:text-base 2xl:text-lg mb-8 leading-relaxed text-gray-200">
             {siteConfig.hero.subtitle}
           </p>
           <motion.button
@@ -59,7 +60,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             onClick={() => setShowQuoteForm(true)}
-            className="bg-red-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="bg-red-600 text-white md:px-8 md:py-4 px-5 py-2 rounded-md text-lg font-semibold hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             {siteConfig.hero.buttonText}
           </motion.button>
@@ -70,7 +71,7 @@ const Home = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="lg:w-1/2 md:w-2/3 w-full h-[400px] sm:h-[500px] lg:h-screen flex items-end"
+          className="lg:w-[45%] md:w-2/3 w-full h-[400px] sm:h-[500px] lg:h-screen flex items-end"
         >
           <img
             src={siteConfig.images.heroImage}
@@ -94,7 +95,9 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="text-center p-6"
               >
-                <div className="text-4xl mb-2">{stat.icon}</div>
+                <div className="size-16 flex items-center justify-center mx-auto bg-white rounded-full">
+                <img src={stat.icon} alt="icons" />
+                </div>
                 <div className="text-3xl font-bold text-red-600 mb-2">
                   {stat.number}
                 </div>
@@ -166,8 +169,9 @@ const Home = () => {
       <RecentWork />
 
       {/* Partnership Section */}
+      
       <section
-        className="py-20 bg-cover bg-center relative"
+        className="py-24 bg-cover bg-center relative"
         style={{ backgroundImage: `url(${siteConfig.images.partnershipBg})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-80"></div>
@@ -178,10 +182,11 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-center text-white mb-2">Why Choose Us</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">
               {siteConfig.partnership.title}
             </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
               {siteConfig.partnership.content}
             </p>
             <Link to="/projects" onClick={()=>scrollTo(0,0)} className="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors duration-200 font-semibold">
@@ -202,9 +207,11 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="border border-red-600 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300"
+                className="border border-red-600 p-8 rounded-3xl text-center hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="text-5xl mb-4">{category.icon}</div>
+                <div className="size-28 flex items-center justify-center mx-auto bg-[#FDF0D5] rounded-full">
+                <img src={category.icon}  alt="icons" />
+                </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {category.title}
                 </h3>

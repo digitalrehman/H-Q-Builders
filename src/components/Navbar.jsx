@@ -47,6 +47,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
+                  onClick={()=>scrollTo(0,0)}
                   className={`text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium ${
                     location.pathname === item.href ? "text-red-600" : ""
                   }`}
