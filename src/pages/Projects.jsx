@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
@@ -132,20 +131,6 @@ const Projects = () => {
                       <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">{project.year}</span>
                     </div>
                     <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex justify-between items-center">
-                      <span
-                        className={`px-3 py-1 rounded-full text-sm font-medium ${
-                          project.category === "commercial"
-                            ? "bg-blue-100 text-blue-800"
-                            : project.category === "multifamily"
-                              ? "bg-green-100 text-green-800"
-                              : "bg-purple-100 text-purple-800"
-                        }`}
-                      >
-                        {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
-                      </span>
-                      <button className="text-red-600 hover:text-red-700 font-medium">View Details →</button>
-                    </div>
                   </div>
                 </motion.div>
               ))}
