@@ -12,9 +12,9 @@
     "responsive",
     "professional"
   ],
-  "author": " H&K Builders Construction",
+  "author": " H&K Builders",
   "license": "MIT",
-  "homepage": "https:// H&K Builders-construction.com",
+  "homepage": "https://H&KBuilders-construction.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,6 +24,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "framer-motion": "^10.16.16",
+    "lucide-react": "^0.525.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

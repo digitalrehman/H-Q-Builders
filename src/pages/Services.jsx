@@ -1,65 +1,107 @@
-"use client"
-
-import { useState } from "react"
-import { Helmet } from "react-helmet"
-import { motion } from "framer-motion"
-import Banner from "../components/Banner"
-import ContactForm from "../components/ContactForm"
-import { siteConfig } from "../assets/config"
+import { useState } from "react";
+import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
+import Banner from "../components/Banner";
+import ContactForm from "../components/ContactForm";
+import { siteConfig } from "../assets/config";
 
 const Services = () => {
-  const [showQuoteForm, setShowQuoteForm] = useState(false)
+  const [showQuoteForm, setShowQuoteForm] = useState(false);
 
-  const serviceDetails = [
-    {
-      title: "Excavation Services",
-      description: "Professional excavation and earthwork services for all types of construction projects.",
-      image: "/placeholder.svg?height=300&width=400",
-      features: [
-        "Site preparation and clearing",
-        "Foundation excavation",
-        "Utility trenching",
-        "Grading and leveling",
-        "Demolition services",
-      ],
-    },
-    {
-      title: "Roofing Solutions",
-      description: "Complete roofing services from new installations to repairs and maintenance.",
-      image: "/placeholder.svg?height=300&width=400",
-      features: [
-        "New roof installation",
-        "Roof repairs and maintenance",
-        "Commercial roofing systems",
-        "Residential roofing",
-        "Emergency roof services",
-      ],
-    },
-    {
-      title: "Electrical Work",
-      description: "Licensed electrical services for residential and commercial properties.",
-      image: "/placeholder.svg?height=300&width=400",
-      features: [
-        "Electrical installations",
-        "Wiring and rewiring",
-        "Panel upgrades",
-        "Commercial electrical systems",
-        "Safety inspections",
-      ],
-    },
-    {
-      title: "General Contracting",
-      description: "Full-service general contracting for projects of all sizes and complexities.",
-      image: "/placeholder.svg?height=300&width=400",
-      features: [
-        "Project management",
-        "Construction planning",
-        "Permit assistance",
-        "Quality control",
-        "Timeline coordination",
-      ],
-    },
-  ]
+const serviceDetails = [
+  {
+    title: "Carpentry Services",
+    description:
+      "Custom carpentry solutions for residential and commercial projects.",
+    image: siteConfig.images.carpentry,
+    features: [
+      "Custom cabinets and shelves",
+      "Door and window framing",
+      "Trim and molding installation",
+      "Deck and porch construction",
+      "Wood repairs and finishes",
+    ],
+  },
+  {
+    title: "Decks and Patios",
+    description:
+      "Beautifully designed and durable decks and patios for outdoor living.",
+    image: siteConfig.images.decksandpatios,
+    features: [
+      "Wood and composite decking",
+      "Patio pavers and stones",
+      "Pergolas and gazebos",
+      "Waterproofing and sealing",
+      "Custom outdoor designs",
+    ],
+  },
+  {
+    title: "Fencing Solutions",
+    description:
+      "Secure and stylish fencing options for all types of properties.",
+    image: siteConfig.images.fencing,
+    features: [
+      "Wood, vinyl, and chain-link fencing",
+      "Fence installation and repair",
+      "Privacy and security fencing",
+      "Gate installation",
+      "Decorative fencing styles",
+    ],
+  },
+  {
+    title: "Flooring Installation",
+    description:
+      "Professional flooring services to enhance the look and feel of any space.",
+    image: siteConfig.images.flooring,
+    features: [
+      "Hardwood and laminate installation",
+      "Tile and vinyl flooring",
+      "Subfloor preparation",
+      "Repairs and refinishing",
+      "Commercial and residential solutions",
+    ],
+  },
+  {
+    title: "Junk Removal",
+    description:
+      "Fast and reliable junk removal for homes, offices, and construction sites.",
+    image: siteConfig.images.junkremoval,
+    features: [
+      "Furniture and appliance removal",
+      "Construction debris cleanup",
+      "Yard waste hauling",
+      "Garage and basement cleanouts",
+      "Eco-friendly disposal",
+    ],
+  },
+  {
+    title: "Painting Services",
+    description:
+      "Interior and exterior painting services that bring your spaces to life.",
+    image: siteConfig.images.painting,
+    features: [
+      "Interior wall and ceiling painting",
+      "Exterior painting and prep",
+      "Staining and sealing",
+      "Drywall patching and repair",
+      "Color consultation",
+    ],
+  },
+  {
+    title: "Landscaping & Maintenance",
+    description:
+      "Transform your outdoor space with professional landscaping solutions.",
+    image: siteConfig.images.landscaping,
+    features: [
+      "Lawn mowing and edging",
+      "Tree and shrub trimming",
+      "Mulching and planting",
+      "Irrigation system setup",
+      "Seasonal yard cleanups",
+    ],
+  },
+];
+
 
   return (
     <>
@@ -75,7 +117,7 @@ const Services = () => {
         <Banner
           title="Our Services"
           subtitle="Comprehensive Construction Solutions for Every Need"
-          backgroundImage="/placeholder.svg?height=400&width=1200"
+          backgroundImage={siteConfig.images.servicebanner}
         />
 
         {/* Services Overview */}
@@ -88,10 +130,13 @@ const Services = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                What We Do
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From excavation to final finishes, we provide comprehensive construction services that meet the highest
-                standards of quality and professionalism.
+                From excavation to final finishes, we provide comprehensive
+                construction services that meet the highest standards of quality
+                and professionalism.
               </p>
             </motion.div>
 
@@ -117,13 +162,24 @@ const Services = () => {
                   </div>
 
                   <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                    <p className="text-gray-600 text-lg mb-6 leading-relaxed">{service.description}</p>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
 
                     <ul className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-700">
-                          <svg className="w-5 h-5 text-red-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <li
+                          key={featureIndex}
+                          className="flex items-center text-gray-700"
+                        >
+                          <svg
+                            className="w-5 h-5 text-red-600 mr-3"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
                             <path
                               fillRule="evenodd"
                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -158,9 +214,12 @@ const Services = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Our Process
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We follow a proven process to ensure every project is completed successfully.
+                We follow a proven process to ensure every project is completed
+                successfully.
               </p>
             </motion.div>
 
@@ -169,22 +228,26 @@ const Services = () => {
                 {
                   step: "01",
                   title: "Consultation",
-                  description: "We meet with you to understand your project requirements and vision.",
+                  description:
+                    "We meet with you to understand your project requirements and vision.",
                 },
                 {
                   step: "02",
                   title: "Planning",
-                  description: "Our team develops a detailed project plan with timelines and specifications.",
+                  description:
+                    "Our team develops a detailed project plan with timelines and specifications.",
                 },
                 {
                   step: "03",
                   title: "Execution",
-                  description: "We execute the project with precision, keeping you informed every step of the way.",
+                  description:
+                    "We execute the project with precision, keeping you informed every step of the way.",
                 },
                 {
                   step: "04",
                   title: "Completion",
-                  description: "Final walkthrough and handover of your completed project.",
+                  description:
+                    "Final walkthrough and handover of your completed project.",
                 },
               ].map((process, index) => (
                 <motion.div
@@ -198,7 +261,9 @@ const Services = () => {
                   <div className="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {process.step}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{process.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {process.title}
+                  </h3>
                   <p className="text-gray-600">{process.description}</p>
                 </motion.div>
               ))}
@@ -215,9 +280,12 @@ const Services = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Ready to Start Your Project?
+              </h2>
               <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Contact us today for a free consultation and estimate. Let's bring your vision to life.
+                Contact us today for a free consultation and estimate. Let's
+                bring your vision to life.
               </p>
               <button
                 onClick={() => setShowQuoteForm(true)}
@@ -230,10 +298,12 @@ const Services = () => {
         </section>
 
         {/* Quote Form Popup */}
-        {showQuoteForm && <ContactForm isPopup={true} onClose={() => setShowQuoteForm(false)} />}
+        {showQuoteForm && (
+          <ContactForm isPopup={true} onClose={() => setShowQuoteForm(false)} />
+        )}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

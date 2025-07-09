@@ -19,7 +19,7 @@ const About = () => {
         <Banner
           title="About Us"
           subtitle="Building Excellence Since 1998"
-          backgroundImage="/placeholder.svg?height=400&width=1200"
+          backgroundImage={siteConfig.images.about}
         />
 
         {/* Company Story */}
@@ -52,7 +52,7 @@ const About = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  src="/placeholder.svg?height=400&width=500"
+                  src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt=" H&K Builders Construction team"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                   loading="lazy"
@@ -137,19 +137,19 @@ const About = () => {
                 {
                   name: "John Smith",
                   position: "Founder & CEO",
-                  image: "/placeholder.svg?height=300&width=300",
+                  image: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                   bio: "With over 30 years in construction, John founded  H&K Builders with a vision of delivering exceptional quality and service.",
                 },
                 {
                   name: "Sarah Johnson",
                   position: "Operations Manager",
-                  image: "/placeholder.svg?height=300&width=300",
+                  image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                   bio: "Sarah ensures every project runs smoothly from start to finish, coordinating teams and managing timelines.",
                 },
                 {
                   name: "Mike Davis",
                   position: "Project Manager",
-                  image: "/placeholder.svg?height=300&width=300",
+                  image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                   bio: "Mike brings 20 years of project management experience, specializing in commercial and multifamily projects.",
                 },
               ].map((member, index) => (

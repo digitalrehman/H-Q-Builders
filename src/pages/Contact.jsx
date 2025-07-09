@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Banner from "../components/Banner"
 import ContactForm from "../components/ContactForm"
 import { siteConfig } from "../assets/config"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 const Contact = () => {
   return (
@@ -20,7 +21,7 @@ const Contact = () => {
         <Banner
           title="Contact Us"
           subtitle="Let's Discuss Your Next Project"
-          backgroundImage="/placeholder.svg?height=400&width=1200"
+          backgroundImage={siteConfig.images.about}
         />
 
         {/* Contact Information */}
@@ -30,19 +31,19 @@ const Contact = () => {
               {[
                 {
                   title: "Call Us",
-                  icon: "📞",
+                  icon: Phone,
                   content: siteConfig.contact.phone,
                   link: `tel:${siteConfig.contact.phone}`,
                 },
                 {
                   title: "Email Us",
-                  icon: "✉️",
+                  icon: Mail,
                   content: siteConfig.contact.email,
                   link: `mailto:${siteConfig.contact.email}`,
                 },
                 {
                   title: "Visit Us",
-                  icon: "📍",
+                  icon: MapPin,
                   content: siteConfig.contact.address,
                   link: "#",
                 },
@@ -53,9 +54,9 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center bg-gray-50 p-8 rounded-lg"
+                  className="flex items-center justify-center flex-col bg-gray-50 p-8 rounded-lg"
                 >
-                  <div className="text-4xl mb-4">{contact.icon}</div>
+                  <div className="text-4xl mb-4 ">{< contact.icon size={40} />}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{contact.title}</h3>
                   <a href={contact.link} className="text-red-600 hover:text-red-700 transition-colors duration-200">
                     {contact.content}

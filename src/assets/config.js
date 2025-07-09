@@ -5,6 +5,11 @@ import decksandpatios from "./images/service/decksandpatios.jpg";
 import fencing from "./images/service/fencing.jpg";
 import flooring from "./images/service/flooring.jpg";
 import partnershipBg from "./images/partnership.webp";
+import servicebanner from "./images/service/servicebanner.jpg";
+import junkremoval from "./images/service/junkremoval.jpg";
+import landscaping from "./images/service/landscaping.jpg";
+import painting from "./images/service/painting.jpg";
+import about from "./images/about.jpg";
 export const siteConfig = {
   // Site metadata
   meta: {
@@ -50,7 +55,15 @@ export const siteConfig = {
     partnershipBg,
     communityTeam1: "/images/community-team-1.jpg",
     communityTeam2: "/images/community-team-2.jpg",
-    footerTruck: "/images/footer-truck.png",
+    servicebanner,
+    carpentry,
+    decksandpatios,
+    fencing,
+    flooring,
+    junkremoval,
+    landscaping,
+    painting,
+    about
   },
 
   // Hero section content

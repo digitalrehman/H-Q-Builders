@@ -13,7 +13,7 @@ const Projects = () => {
     {
       title: "Downtown Office Complex",
       category: "commercial",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://images.unsplash.com/photo-1577412647305-991150c7d163",
       description:
         "Complete renovation of a 50,000 sq ft office building including electrical, HVAC, and interior finishes.",
       year: "2023",
@@ -21,35 +21,35 @@ const Projects = () => {
     {
       title: "Luxury Apartment Building",
       category: "multifamily",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://images.unsplash.com/photo-1624204386084-dd8c05e32226",
       description: "New construction of a 120-unit luxury apartment complex with modern amenities.",
       year: "2023",
     },
     {
       title: "Custom Family Home",
       category: "residential",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://images.unsplash.com/photo-1601758003122-53c40e686a19",
       description: "Ground-up construction of a 4,500 sq ft custom home with high-end finishes.",
       year: "2022",
     },
     {
       title: "Retail Shopping Center",
       category: "commercial",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://plus.unsplash.com/premium_photo-1683133261283-78fe47339160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "New construction of a 25,000 sq ft retail center with multiple tenant spaces.",
       year: "2022",
     },
     {
       title: "Townhome Development",
       category: "multifamily",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://images.unsplash.com/photo-1651522106595-078fac34d90e?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Development of 24 luxury townhomes with modern design and energy-efficient features.",
       year: "2022",
     },
     {
       title: "Historic Home Restoration",
       category: "residential",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://images.unsplash.com/photo-1610401784899-09df56ac6d84?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Complete restoration of a 1920s historic home while preserving original character.",
       year: "2021",
     },
@@ -79,7 +79,7 @@ const Projects = () => {
         <Banner
           title="Our Projects"
           subtitle="Showcasing Excellence in Every Build"
-          backgroundImage="/placeholder.svg?height=400&width=1200"
+          backgroundImage="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514"
         />
 
         {/* Project Categories */}
