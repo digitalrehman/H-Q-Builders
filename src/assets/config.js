@@ -1,3 +1,4 @@
+import { Facebook, Instagram } from "lucide-react";
 import logo from "./images/logo.png";
 import heroImage from "./images/banner.webp";
 import carpentry from "./images/service/carpentry.jpg";
@@ -20,6 +21,27 @@ import mangment from "./images/mangment.png";
 import interior from "./images/interior.png";
 import multifamily from "./images/multifamily.png";
 import residental from "./images/residental.png";
+import profile from "./images/profile.jpg";
+import bath1 from "./images/project/bath1.jpg";
+import bath2 from "./images/project/bath2.jpg";
+import fencing1 from "./images/project/fencing1.jpg";
+import fencing2 from "./images/project/fencing2.jpg";
+import fencing3 from "./images/project/fencing3.webp";
+import fencing4 from "./images/project/fencing4.jpg";
+import fencing5 from "./images/project/fencing5.webp";
+import flooring1 from "./images/project/flooring1.jpg";
+import flooring2 from "./images/project/flooring2.jpg";
+import flooring3 from "./images/project/flooring3.jpg";
+import kitchen1 from "./images/project/kitchen1.webp";
+import kitchen2 from "./images/project/kitchen2.jpg";
+import kitchen3 from "./images/project/kitchen3.jpg";
+import paint1 from "./images/project/paint1.jpg";
+import paint2 from "./images/project/paint2.jpg";
+import paint4 from "./images/project/paint4.jpg";
+import paint5 from "./images/project/paint5.jpg";
+import paint6 from "./images/project/paint6.jpg";
+import roofing1 from "./images/project/roofing1.jpg";
+
 export const siteConfig = {
   // Site metadata
   meta: {
@@ -35,7 +57,7 @@ export const siteConfig = {
 
   // Contact information
   contact: {
-    phone: "585-981-8240 / 469-416-1014",
+    phone: "585-981-8240",
     email: "hkbuilders11@gmail.com",
     address: "13071 Darkwood, frisco, tx",
   },
@@ -69,6 +91,26 @@ export const siteConfig = {
     roofing,
     multifamily,
     residental,
+    profile,
+    bath1,
+    bath2,
+    fencing1,
+    fencing2,
+    fencing3,
+    fencing4,
+    fencing5,
+    flooring1,
+    flooring2,
+    flooring3,
+    kitchen1,
+    kitchen2,
+    kitchen3,
+    paint1,
+    paint2,
+    paint4,
+    paint5,
+    paint6,
+    roofing1,
   },
 
   // Hero section content
@@ -244,15 +286,15 @@ export const siteConfig = {
       { name: "Contact", href: "/contact" },
     ],
     services: [
-      { name: "Excavation", href: "/services#excavation" },
-      { name: "Roofing", href: "/services#roofing" },
-      { name: "Electrical", href: "/services#electrical" },
-      { name: "General Contracting", href: "/services#general" },
+      { name: "Carpentry", href: "/services" },
+      { name: "Roofing", href: "/services" },
+      { name: "Fencing", href: "/services" },
+      { name: "Flooring Installation", href: "/services" },
+      { name: "Junk Removal", href: "/services" },
     ],
     socialLinks: [
-      { name: "Facebook", href: "#", icon: "facebook" },
-      { name: "Twitter", href: "#", icon: "twitter" },
-      { name: "LinkedIn", href: "#", icon: "linkedin" },
+      { name: "Facebook", href: "#", icon: Facebook },
+      { name: "Instagram", href: "#", icon: Instagram },
     ],
   },
 };

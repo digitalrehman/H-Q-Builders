@@ -1,13 +1,11 @@
-"use client"
-import { useState } from "react"
-import { Helmet } from "react-helmet"
-import { motion } from "framer-motion"
-import Banner from "../components/Banner"
-import { siteConfig } from "../assets/config"
+"use client";
+import { useState } from "react";
+import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
+import Banner from "../components/Banner";
+import { siteConfig } from "../assets/config";
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState("all")
-
   const projects = [
     {
       title: "Downtown Office Complex",
@@ -21,48 +19,46 @@ const Projects = () => {
       title: "Luxury Apartment Building",
       category: "multifamily",
       image: "https://images.unsplash.com/photo-1624204386084-dd8c05e32226",
-      description: "New construction of a 120-unit luxury apartment complex with modern amenities.",
+      description:
+        "New construction of a 120-unit luxury apartment complex with modern amenities.",
       year: "2023",
     },
     {
       title: "Custom Family Home",
       category: "residential",
       image: "https://images.unsplash.com/photo-1601758003122-53c40e686a19",
-      description: "Ground-up construction of a 4,500 sq ft custom home with high-end finishes.",
+      description:
+        "Ground-up construction of a 4,500 sq ft custom home with high-end finishes.",
       year: "2022",
     },
     {
       title: "Retail Shopping Center",
       category: "commercial",
-      image: "https://plus.unsplash.com/premium_photo-1683133261283-78fe47339160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description: "New construction of a 25,000 sq ft retail center with multiple tenant spaces.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1683133261283-78fe47339160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description:
+        "New construction of a 25,000 sq ft retail center with multiple tenant spaces.",
       year: "2022",
     },
     {
       title: "Townhome Development",
       category: "multifamily",
-      image: "https://images.unsplash.com/photo-1651522106595-078fac34d90e?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description: "Development of 24 luxury townhomes with modern design and energy-efficient features.",
+      image:
+        "https://images.unsplash.com/photo-1651522106595-078fac34d90e?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description:
+        "Development of 24 luxury townhomes with modern design and energy-efficient features.",
       year: "2022",
     },
     {
       title: "Historic Home Restoration",
       category: "residential",
-      image: "https://images.unsplash.com/photo-1610401784899-09df56ac6d84?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description: "Complete restoration of a 1920s historic home while preserving original character.",
+      image:
+        "https://images.unsplash.com/photo-1610401784899-09df56ac6d84?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description:
+        "Complete restoration of a 1920s historic home while preserving original character.",
       year: "2021",
     },
-  ]
-
-  const filteredProjects =
-    activeCategory === "all" ? projects : projects.filter((project) => project.category === activeCategory)
-
-  const categories = [
-    { id: "all", name: "All Projects" },
-    { id: "commercial", name: "Commercial" },
-    { id: "multifamily", name: "Multifamily" },
-    { id: "residential", name: "Residential" },
-  ]
+  ];
 
   return (
     <>
@@ -81,27 +77,6 @@ const Projects = () => {
           backgroundImage={siteConfig.images.project}
         />
 
-        {/* Project Categories */}
-        <section className="py-8 bg-white border-b">
-          <div className="  px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-2 rounded-full font-medium transition-colors duration-200 ${
-                    activeCategory === category.id
-                      ? "bg-red-600 text-white"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                  }`}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Projects Grid */}
         <section className="py-16 bg-gray-50">
           <div className="  px-4 sm:px-6 lg:px-8">
@@ -111,7 +86,7 @@ const Projects = () => {
               transition={{ duration: 0.6 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {filteredProjects.map((project, index) => (
+              {projects.map((project, index) => (
                 <motion.div
                   key={project.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -127,10 +102,13 @@ const Projects = () => {
                   />
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
-                      <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">{project.year}</span>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {project.title}
+                      </h3>
+                      <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        {project.year}
+                      </span>
                     </div>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -148,9 +126,12 @@ const Projects = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Project Highlights</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Project Highlights
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our portfolio represents millions of dollars in successful construction projects.
+                Our portfolio represents millions of dollars in successful
+                construction projects.
               </p>
             </motion.div>
 
@@ -169,7 +150,9 @@ const Projects = () => {
                   viewport={{ once: true }}
                   className="bg-gray-50 p-6 rounded-lg"
                 >
-                  <div className="text-3xl font-bold text-red-600 mb-2">{stat.number}</div>
+                  <div className="text-3xl font-bold text-red-600 mb-2">
+                    {stat.number}
+                  </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
@@ -186,9 +169,12 @@ const Projects = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Ready to Start Your Project?
+              </h2>
               <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Let us help you bring your construction vision to life with the same quality and attention to detail.
+                Let us help you bring your construction vision to life with the
+                same quality and attention to detail.
               </p>
               <button className="bg-white text-red-600 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 font-semibold">
                 Get Started Today
@@ -198,7 +184,7 @@ const Projects = () => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
