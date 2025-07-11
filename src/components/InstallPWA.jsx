@@ -6,9 +6,11 @@ const InstallPWA = ({ className = "" }) => {
 
   useEffect(() => {
     // Check if already installed
-    if (window.matchMedia("(display-mode: standalone)").matches) {
-      setIsInstalled(true);
-    }
+    const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+if (isStandalone) {
+  setIsInstalled(true);
+}
+
 
     const beforeInstallHandler = (e) => {
       e.preventDefault();
