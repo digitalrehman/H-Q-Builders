@@ -5,30 +5,29 @@ const InstallPWA = ({ className = "" }) => {
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
-    // Check if already installed
-    const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
-if (isStandalone) {
-  setIsInstalled(true);
-}
-
-
-    const beforeInstallHandler = (e) => {
-      e.preventDefault();
-      setDeferredPrompt(e);
-    };
-
-    const installHandler = () => {
+    if (window.matchMedia("(display-mode: standalone)").matches) {
       setIsInstalled(true);
+    }
+  
+    const beforeInstallHandler = (e) => {
+      e.preventDefault(); // prevent default banner
+      setDeferredPrompt(e);
+      setIsInstalled(false); // ensure button is enabled when installable
     };
-
+  
+    const installHandler = () => {
+      setIsInstalled(true); // mark as installed when appinstalled fires
+    };
+  
     window.addEventListener("beforeinstallprompt", beforeInstallHandler);
     window.addEventListener("appinstalled", installHandler);
-
+  
     return () => {
       window.removeEventListener("beforeinstallprompt", beforeInstallHandler);
       window.removeEventListener("appinstalled", installHandler);
     };
   }, []);
+  
 
   const handleInstall = async () => {
     if (deferredPrompt) {
@@ -44,18 +43,26 @@ if (isStandalone) {
   };
 
   return (
-    <button
-      onClick={handleInstall}
-      disabled={isInstalled}
-      className={`${
-        isInstalled
-          ? "bg-gray-400 cursor-not-allowed"
-          : "bg-red-600 hover:bg-red-700"
-      } text-white px-6 py-2 rounded-md transition-colors duration-200 font-medium ${className}`}
-    >
-      {isInstalled ? "App Installed" : "Install App"}
-    </button>
+    <>
+      {!isInstalled && deferredPrompt && (
+        <button
+          onClick={handleInstall}
+          className={`bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md transition-colors duration-200 font-medium ${className}`}
+        >
+          Install App
+        </button>
+      )}
+      {isInstalled && (
+        <button
+          disabled
+          className={`bg-gray-400 cursor-not-allowed text-white px-6 py-2 rounded-md transition-colors duration-200 font-medium ${className}`}
+        >
+          App Installed
+        </button>
+      )}
+    </>
   );
+  
 };
 
 export default InstallPWA;
