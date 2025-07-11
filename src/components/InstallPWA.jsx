@@ -8,26 +8,26 @@ const InstallPWA = ({ className = "" }) => {
     if (window.matchMedia("(display-mode: standalone)").matches) {
       setIsInstalled(true);
     }
-  
+
     const beforeInstallHandler = (e) => {
       e.preventDefault(); // prevent default banner
       setDeferredPrompt(e);
       setIsInstalled(false); // ensure button is enabled when installable
     };
-  
+
     const installHandler = () => {
       setIsInstalled(true); // mark as installed when appinstalled fires
     };
-  
+
     window.addEventListener("beforeinstallprompt", beforeInstallHandler);
     window.addEventListener("appinstalled", installHandler);
-  
+
     return () => {
       window.removeEventListener("beforeinstallprompt", beforeInstallHandler);
       window.removeEventListener("appinstalled", installHandler);
     };
   }, []);
-  
+
 
   const handleInstall = async () => {
     if (deferredPrompt) {
@@ -62,7 +62,7 @@ const InstallPWA = ({ className = "" }) => {
       )}
     </>
   );
-  
+
 };
 
 export default InstallPWA;

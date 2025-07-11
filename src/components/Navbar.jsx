@@ -31,9 +31,8 @@ const Navbar = () => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-lg" : " bg-white"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-lg" : " bg-white"
+          }`}
       >
         <div className="px-4 sm:px-6 lg:px-28">
           <div className="flex justify-between items-center h-16 lg:h-20">
@@ -49,21 +48,20 @@ const Navbar = () => {
                   key={item.name}
                   to={item.href}
                   onClick={() => scrollTo(0, 0)}
-                  className={`text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium ${
-                    location.pathname === item.href ? "text-red-600" : ""
-                  }`}
+                  className={`text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium ${location.pathname === item.href ? "text-red-600" : ""
+                    }`}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="flex items-center space-x-2">
-              <button
-                onClick={handleContactClick}
-                className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition-colors duration-200 font-medium"
-              >
-                Contact
-              </button>
-              <InstallPWA className="" />
+                <button
+                  onClick={handleContactClick}
+                  className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition-colors duration-200 font-medium"
+                >
+                  Contact
+                </button>
+                <InstallPWA className="" />
               </div>
             </div>
 
@@ -112,10 +110,12 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium ${
-                      location.pathname === item.href ? "text-red-600" : ""
-                    }`}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      setIsOpen(false);
+                    }}
+                    className={`block text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium ${location.pathname === item.href ? "text-red-600" : ""
+                      }`}
                   >
                     {item.name}
                   </Link>

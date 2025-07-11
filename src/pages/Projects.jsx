@@ -151,14 +151,14 @@ const Projects = () => {
             >
               {projects.map((project, index) => (
                 <motion.div
-                  key={project.title}
+                  key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-64 object-cover"
                     loading="lazy"
