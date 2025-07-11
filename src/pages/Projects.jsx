@@ -1,62 +1,125 @@
-"use client";
-import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import Banner from "../components/Banner";
 import { siteConfig } from "../assets/config";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  let navigate = useNavigate();
   const projects = [
     {
-      title: "Downtown Office Complex",
+      title: "Kitchen Remodeling",
+      category: "residential",
+      image: siteConfig.images.kitchen3,
+      year: "2025",
+    },
+    {
+      title: "Paint & Finishing",
       category: "commercial",
-      image: "https://images.unsplash.com/photo-1577412647305-991150c7d163",
-      description:
-        "Complete renovation of a 50,000 sq ft office building including electrical, HVAC, and interior finishes.",
+      image: siteConfig.images.paint2,
+      year: "2024",
+    },
+    {
+      title: "Fence Installation",
+      category: "multifamily",
+      image: siteConfig.images.fencing3,
       year: "2023",
     },
     {
-      title: "Luxury Apartment Building",
-      category: "multifamily",
-      image: "https://images.unsplash.com/photo-1624204386084-dd8c05e32226",
-      description:
-        "New construction of a 120-unit luxury apartment complex with modern amenities.",
-      year: "2023",
-    },
-    {
-      title: "Custom Family Home",
+      title: "Flooring Installation",
       category: "residential",
-      image: "https://images.unsplash.com/photo-1601758003122-53c40e686a19",
-      description:
-        "Ground-up construction of a 4,500 sq ft custom home with high-end finishes.",
+      image: siteConfig.images.flooring2,
       year: "2022",
     },
     {
-      title: "Retail Shopping Center",
+      title: "Roof Installation",
       category: "commercial",
-      image:
-        "https://plus.unsplash.com/premium_photo-1683133261283-78fe47339160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description:
-        "New construction of a 25,000 sq ft retail center with multiple tenant spaces.",
-      year: "2022",
-    },
-    {
-      title: "Townhome Development",
-      category: "multifamily",
-      image:
-        "https://images.unsplash.com/photo-1651522106595-078fac34d90e?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description:
-        "Development of 24 luxury townhomes with modern design and energy-efficient features.",
-      year: "2022",
-    },
-    {
-      title: "Historic Home Restoration",
-      category: "residential",
-      image:
-        "https://images.unsplash.com/photo-1610401784899-09df56ac6d84?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description:
-        "Complete restoration of a 1920s historic home while preserving original character.",
+      image: siteConfig.images.roofing1,
       year: "2021",
+    },
+    {
+      title: "Paint & Finishing",
+      category: "multifamily",
+      image: siteConfig.images.paint4,
+      year: "2020",
+    },
+    {
+      title: "Bathroom Remodeling",
+      category: "residential",
+      image: siteConfig.images.bath2,
+      year: "2019",
+    },
+    {
+      title: "Fence Installation",
+      category: "commercial",
+      image: siteConfig.images.fencing5,
+      year: "2018",
+    },
+    {
+      title: "Paint & Finishing",
+      category: "residential",
+      image: siteConfig.images.paint5,
+      year: "2017",
+    },
+    {
+      title: "Bathroom Remodeling",
+      category: "multifamily",
+      image: siteConfig.images.bath1,
+      year: "2016",
+    },
+    {
+      title: "Kitchen Remodeling",
+      category: "commercial",
+      image: siteConfig.images.kitchen2,
+      year: "2015",
+    },
+    {
+      title: "Flooring Installation",
+      category: "multifamily",
+      image: siteConfig.images.flooring1,
+      year: "2025",
+    },
+    {
+      title: "Paint & Finishing",
+      category: "residential",
+      image: siteConfig.images.paint6,
+      year: "2024",
+    },
+    {
+      title: "Kitchen Remodeling",
+      category: "multifamily",
+      image: siteConfig.images.kitchen1,
+      year: "2023",
+    },
+    {
+      title: "Fence Installation",
+      category: "residential",
+      image: siteConfig.images.fencing1,
+      year: "2022",
+    },
+    {
+      title: "Fence Installation",
+      category: "commercial",
+      image: siteConfig.images.fencing2,
+      year: "2021",
+    },
+    {
+      title: "Paint & Finishing",
+      category: "multifamily",
+      image: siteConfig.images.paint1,
+      year: "2020",
+    },
+    {
+      title: "Fence Installation",
+      category: "residential",
+      image: siteConfig.images.fencing4,
+      year: "2019",
+    },
+    {
+      title: "Flooring Installation",
+      category: "commercial",
+      image: siteConfig.images.flooring3,
+      year: "2018",
     },
   ];
 
@@ -137,10 +200,10 @@ const Projects = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {[
-                { number: "500+", label: "Projects Completed" },
-                { number: "$50M+", label: "Total Project Value" },
-                { number: "25", label: "Years Experience" },
-                { number: "100%", label: "Client Satisfaction" },
+                { number: "200+", label: "Projects Completed" },
+                { number: "$10M+", label: "Total Project Value" },
+                { number: "10", label: "Years Experience" },
+                { number: "98%", label: "Client Satisfaction" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -176,7 +239,10 @@ const Projects = () => {
                 Let us help you bring your construction vision to life with the
                 same quality and attention to detail.
               </p>
-              <button className="bg-white text-red-600 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 font-semibold">
+              <button
+                onClick={() => navigate("/contact")}
+                className="bg-white text-red-600 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 font-semibold"
+              >
                 Get Started Today
               </button>
             </motion.div>

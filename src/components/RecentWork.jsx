@@ -2,31 +2,53 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { siteConfig } from "../assets/config";
+import { Link } from "react-router-dom";
 
 const recentWork = [
   {
-    title: "New Home Construction",
-    image: "https://images.unsplash.com/photo-1556156653-e5a7c69cc263",
+    title: "Bathroom Remodeling",
+    image: siteConfig.images.bath1,
   },
   {
-    title: "Office Renovation",
-    image: "https://images.unsplash.com/photo-1631193908297-ebadbad17167",
+    title: "Fence Installation",
+    image: siteConfig.images.fencing1,
   },
   {
-    title: "Roof Installation",
-    image: "https://images.unsplash.com/photo-1635424709845-3a85ad5e1f5e",
+    title: "Fence Installation",
+    image: siteConfig.images.fencing3,
+  },
+  {
+    title: "Fence Installation",
+    image: siteConfig.images.fencing5,
+  },
+  {
+    title: "Flooring Installation",
+    image: siteConfig.images.flooring1,
+  },
+  {
+    title: "Flooring Installation",
+    image: siteConfig.images.flooring3,
   },
   {
     title: "Kitchen Remodeling",
-    image: "https://images.unsplash.com/photo-1682888818620-94875adf5bb9",
+    image: siteConfig.images.kitchen1,
   },
-  // Add more as needed
+  {
+    title: "Kitchen Remodeling",
+    image: siteConfig.images.kitchen2,
+  },
+  {
+    title: "Roof Installation",
+    image: siteConfig.images.roofing1,
+  },
 ];
+
 
 const RecentWork = () => {
   return (
-    <section className="py-20">
-      <div className="md:w-[85%] w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 mb-10">
+      <div className="md:w-[85%] relative w-full mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-10">
           Our Recent Work
         </h2>
@@ -61,6 +83,7 @@ const RecentWork = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <Link to="/projects" className="absolute underline hover:text-red-600 right-10">More</Link>
       </div>
     </section>
   );

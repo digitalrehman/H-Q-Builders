@@ -1,4 +1,4 @@
-"use client"
+
 import { motion } from "framer-motion"
 
 const Banner = ({ title, subtitle, backgroundImage, isHome = false }) => {
