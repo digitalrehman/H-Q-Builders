@@ -12,7 +12,7 @@ const Contact = () => {
         <title>Contact Us - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Get in touch with  H&K Builders Construction for your next project. Contact us for a free consultation and estimate."
+          content="Get in touch with  HK Builders for your next project. Contact us for a free consultation and estimate."
         />
       </Helmet>
 

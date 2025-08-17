@@ -72,7 +72,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} H&K Builders Construction. All rights
+            © {new Date().getFullYear()} HK Builders. All rights
             reserved.
           </p>
 

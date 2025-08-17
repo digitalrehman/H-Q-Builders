@@ -129,7 +129,7 @@ const Projects = () => {
         <title>Projects - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Explore  H&K Builders Construction's portfolio of completed projects including commercial, multifamily, and residential construction."
+          content="Explore  HK Builders portfolio of completed projects including commercial, multifamily, and residential construction."
         />
       </Helmet>
 

@@ -12,7 +12,7 @@ const About = () => {
         <title>About Us - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Learn about  H&K Builders Construction's history, values, and commitment to quality construction services."
+          content="Learn about  HK Builders history, values, and commitment to quality construction services."
         />
       </Helmet>
 
@@ -50,7 +50,7 @@ const About = () => {
                   earned our reputation by staying true to our values: honest
                   work, skilled craftsmanship, and treating every home like it
                   was our own. Those early years laid the foundation for
-                  everything H&K Builders stands for today.
+                  everything HK Builders stands for today.
                 </p>
               </div>
 
@@ -62,7 +62,7 @@ const About = () => {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Three years ago, we brought our experience and dedication to
                   Texas, planting new roots in Dallas, Frisco, and surrounding
-                  areas. Since then, H&K Builders has proudly continued the
+                  areas. Since then, HK Builders has proudly continued the
                   family legacy — now with a broader reach and even stronger
                   commitment to quality. In every project, big or small, we
                   bring the same passion that started it all back in
@@ -149,7 +149,7 @@ const About = () => {
                 Our Leadership Team
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Meet the experienced professionals who lead H&K Builders
+                Meet the experienced professionals who lead HK Builders
                 Construction.
               </p>
             </motion.div>

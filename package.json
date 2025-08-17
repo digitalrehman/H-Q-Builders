@@ -1,9 +1,9 @@
 {
-  "name": " H&K Builders-construction-website",
+  "name": " HK Builders-construction-website",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Professional construction business website for  H&K Builders Construction - Built with React.js and Tailwind CSS",
+  "description": "Professional construction business website for  HK Builders - Built with React.js and Tailwind CSS",
   "keywords": [
     "construction",
     "business-website",
@@ -12,9 +12,9 @@
     "responsive",
     "professional"
   ],
-  "author": " H&K Builders",
+  "author": " HK Builders",
   "license": "MIT",
-  "homepage": "https://H&KBuilders-construction.com",
+  "homepage": "https://HKBuilders-construction.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

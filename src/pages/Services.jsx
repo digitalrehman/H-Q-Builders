@@ -134,7 +134,7 @@ const Services = () => {
         <title>Services - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Explore  H&K Builders Construction's comprehensive services including excavation, roofing, electrical work, and general contracting."
+          content="Explore  HK Builders comprehensive services including excavation, roofing, electrical work, and general contracting."
         />
       </Helmet>
 
@@ -159,7 +159,7 @@ const Services = () => {
                 What We Do
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                At H&K Builders, we handle every aspect of your renovation with precision and care. Explore our wide range of remodeling services designed to enhance your home’s beauty, function, and value — all delivered with trusted local expertise.
+                At HK Builders, we handle every aspect of your renovation with precision and care. Explore our wide range of remodeling services designed to enhance your home’s beauty, function, and value — all delivered with trusted local expertise.
               </p>
             </motion.div>
 

@@ -45,13 +45,13 @@ import roofing1 from "./images/project/roofing1.jpg";
 export const siteConfig = {
   // Site metadata
   meta: {
-    title: " H&K Builders - Professional Construction Services",
+    title: " HK Builders - Professional Construction Services",
     description:
       "Committed to quality construction services including excavation, roofing, electrical, and general contracting. Experience excellence every time.",
     keywords:
       "construction, excavation, roofing, electrical, general contracting, commercial, residential, multifamily",
-    author: " H&K Builders Construction",
-    url: "https:// H&K Builders-construction.com",
+    author: "HK Builders",
+    url: "https://hkbuilders.co/",
     image: "/images/hero-bg.jpg",
   },
 
@@ -115,10 +115,10 @@ export const siteConfig = {
 
   // Hero section content
   hero: {
-    title: "Transforming Houses Into Dream Homes with H&K Builders ",
+    title: "Transforming Houses Into Dream Homes with HK Builders ",
     subHeading: "Trusted Remodeling Experts in Dallas, Frisco & Beyond",
     subtitle:
-      "From modern kitchens and luxurious bathrooms to full home renovations, H&K Builders delivers quality craftsmanship with trusted results. Proudly serving Dallas, Frisco, and surrounding Texas cities — we bring your ideas to life, one project at a time.",
+      "From modern kitchens and luxurious bathrooms to full home renovations, HK Builders delivers quality craftsmanship with trusted results. Proudly serving Dallas, Frisco, and surrounding Texas cities — we bring your ideas to life, one project at a time.",
     buttonText: "Request a Quote",
   },
 
@@ -154,7 +154,7 @@ export const siteConfig = {
   partnership: {
     title: "Built on Trust, Backed by Experience",
     content:
-      "At H&K Builders, we don’t just remodel — we build lasting relationships. With years of hands-on experience and a trusted partnership with URD Construction in Dallas, we’ve proudly delivered reliable, high-quality results across hundreds of homes. Your vision is in safe, skilled hands.",
+      "At HK Builders, we don’t just remodel — we build lasting relationships. With years of hands-on experience and a trusted partnership with URD Construction in Dallas, we’ve proudly delivered reliable, high-quality results across hundreds of homes. Your vision is in safe, skilled hands.",
     buttonText: "Let's Build Together",
   },
 
@@ -190,49 +190,49 @@ export const siteConfig = {
     {
       name: "John Smith",
       company: "ABC Corporation",
-      text: " H&K Builders delivered exceptional quality on our commercial project. Their attention to detail and professionalism exceeded our expectations.",
+      text: " HK Builders delivered exceptional quality on our commercial project. Their attention to detail and professionalism exceeded our expectations.",
       rating: 5,
     },
     {
       name: "Sarah Johnson",
       company: "Homeowner",
-      text: "From start to finish, the  H&K Builders team was professional, reliable, and delivered outstanding results on our home renovation.",
+      text: "From start to finish, the  HK Builders team was professional, reliable, and delivered outstanding results on our home renovation.",
       rating: 5,
     },
     {
       name: "Mike Davis",
       company: "Property Manager",
-      text: "We've worked with  H&K Builders on multiple multifamily projects. Their quality and timeliness are consistently excellent.",
+      text: "We've worked with  HK Builders on multiple multifamily projects. Their quality and timeliness are consistently excellent.",
       rating: 5,
     },
     {
       name: "Lisa Brown",
       company: "Restaurant Owner",
-      text: " H&K Builders transformed our restaurant space beautifully. The project was completed on time and within budget.",
+      text: " HK Builders transformed our restaurant space beautifully. The project was completed on time and within budget.",
       rating: 5,
     },
     {
       name: "Tom Wilson",
       company: "Office Manager",
-      text: "Professional service from consultation to completion.  H&K Builders is our go-to contractor for all office renovations.",
+      text: "Professional service from consultation to completion.  HK Builders is our go-to contractor for all office renovations.",
       rating: 5,
     },
     {
       name: "Jennifer Lee",
       company: "Homeowner",
-      text: "The electrical work  H&K Builders performed was top-notch. Clean, professional, and up to all safety standards.",
+      text: "The electrical work  HK Builders performed was top-notch. Clean, professional, and up to all safety standards.",
       rating: 5,
     },
     {
       name: "Robert Garcia",
       company: "Developer",
-      text: " H&K Builders has been our trusted partner on numerous development projects. Their expertise is unmatched.",
+      text: " HK Builders has been our trusted partner on numerous development projects. Their expertise is unmatched.",
       rating: 5,
     },
     {
       name: "Amanda Taylor",
       company: "Business Owner",
-      text: "Excellent communication throughout the project.  H&K Builders kept us informed every step of the way.",
+      text: "Excellent communication throughout the project.  HK Builders kept us informed every step of the way.",
       rating: 5,
     },
   ],
@@ -241,7 +241,7 @@ export const siteConfig = {
   community: {
     title: "Rooted in Community",
     content:
-      "We take pride in being an active part of our local community. From supporting local charities to participating in community development projects,  H&K Builders is committed to giving back to the neighborhoods we serve.",
+      "We take pride in being an active part of our local community. From supporting local charities to participating in community development projects,  HK Builders is committed to giving back to the neighborhoods we serve.",
     posts: [
       {
         title: "Community Blog Post",
@@ -278,7 +278,7 @@ export const siteConfig = {
   // Footer
   footer: {
     description:
-      " H&K Builders is committed to delivering quality construction services with integrity and excellence.",
+      " HK Builders is committed to delivering quality construction services with integrity and excellence.",
     quickLinks: [
       { name: "About Us", href: "/about" },
       { name: "Services", href: "/services" },

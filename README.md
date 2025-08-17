@@ -2,9 +2,9 @@
 
 ```
 
-#  H&K Builders Construction Website
+#  HK Builders Website
 
-A professional, fully responsive business website built with React.js and Tailwind CSS for  H&K Builders Construction company.
+A professional, fully responsive business website built with React.js and Tailwind CSS for  HK Builders company.
 
 ## 🚀 Features
 
@@ -28,7 +28,7 @@ A professional, fully responsive business website built with React.js and Tailwi
 ## 📁 Project Structure
 
 \`\`\`
- H&K Builders-website/
+ HK Builders-website/
 ├── public/
 │   ├── images/          # Website images
 │   └── favicon.ico
@@ -67,8 +67,8 @@ A professional, fully responsive business website built with React.js and Tailwi
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/ H&K Builders-construction/website.git
-   cd  H&K Builders-website
+   git clone https://github.com/ HK Builders-construction/website.git
+   cd  HK Builders-website
    \`\`\`
 2. **Install dependencies**
    \`\`\`bash
@@ -234,12 +234,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-** H&K Builders Construction**
+** HK Builders**
 
-- Website: https:// H&K Builders-construction.com
-- Email: info@ H&K Buildersconstruction.com
+- Website: https:// HK Builders-construction.com
+- Email: info@ HK Buildersconstruction.com
 - Phone: +1 (555) 123-4567
 
 ---
 
-Built with ❤️ for  H&K Builders Construction
+Built with ❤️ for  HK Builders
