@@ -1,0 +1,11 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Block unnecessary files/folders (optional)
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://hkbuilders.co/sitemap.xml
