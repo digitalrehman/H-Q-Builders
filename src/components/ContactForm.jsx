@@ -1,83 +1,82 @@
-
-
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import emailjs from "@emailjs/browser"
-import { siteConfig } from "../assets/config"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { siteConfig } from "../assets/config";
 
 const ContactForm = ({ isPopup = false, onClose = null }) => {
+  // Initialize with your real public key
+  emailjs.init(import.meta.env.VITE_PUBLIC_KEY);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     service: "",
     message: "",
-  })
-  const [errors, setErrors] = useState({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
+  });
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   // Validation patterns
   const patterns = {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phone: /^[+]?[1-9][\d]{0,15}$/,
-  }
+    phone: /^(\+?\d{1,4}[\s-]?)?(\d{7,12})$/, // accepts with/without country code
+  };
 
   const validateForm = () => {
-    const newErrors = {}
+    const newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
+      newErrors.name = "Name is required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "Email is required";
     } else if (!patterns.email.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address"
+      newErrors.email = "Please enter a valid email address";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required"
-    } else if (!patterns.phone.test(formData.phone.replace(/[\s\-$$$$]/g, ""))) {
-      newErrors.phone = "Please enter a valid phone number"
+      newErrors.phone = "Phone number is required";
+    } else if (!patterns.phone.test(formData.phone.replace(/[\s-]/g, ""))) {
+      newErrors.phone =
+        "Please enter a valid phone number (with or without country code)";
     }
 
     if (!formData.service) {
-      newErrors.service = "Please select a service"
+      newErrors.service = "Please select a service";
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required"
+      newErrors.message = "Message is required";
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }))
+    }));
 
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
         [name]: "",
-      }))
+      }));
     }
-  }
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!validateForm()) {
-      return
+      return;
     }
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     try {
       // EmailJS configuration
@@ -85,47 +84,47 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
-        service: formData.service,
-        message: formData.message,
-        to_email: siteConfig.contact.email,
-      }
+        project_type: formData.service,
+        message: formData.message || "No additional details provided",
+      };
 
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        templateParams,
-        "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
-      )
+        import.meta.env.VITE_EMAILJS_KEY,
+        import.meta.env.VITE_TEMPLATE_ID, // Replace with your EmailJS template ID
+        templateParams
+      );
 
-      setIsSubmitted(true)
+      setIsSubmitted(true);
       setFormData({
         name: "",
         email: "",
         phone: "",
         service: "",
         message: "",
-      })
+      });
 
       // Auto close popup after success
       if (isPopup && onClose) {
         setTimeout(() => {
-          onClose()
-          setIsSubmitted(false)
-        }, 2000)
+          onClose();
+          setIsSubmitted(false);
+        }, 2000);
       }
     } catch (error) {
-      console.error("Error sending email:", error)
-      alert("There was an error sending your message. Please try again.")
+      console.error("Error sending email:", error);
+      alert("There was an error sending your message. Please try again.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const formContent = (
     <div className={`${isPopup ? "max-w-md" : "max-w-2xl"} mx-auto`}>
       {!isPopup && (
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">{siteConfig.contactForm.title}</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            {siteConfig.contactForm.title}
+          </h2>
           <p className="text-gray-600">{siteConfig.contactForm.subtitle}</p>
         </div>
       )}
@@ -139,12 +138,27 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
             className="text-center py-8"
           >
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3>
-            <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Thank You!
+            </h3>
+            <p className="text-gray-600">
+              Your message has been sent successfully. We'll get back to you
+              soon.
+            </p>
           </motion.div>
         ) : (
           <motion.form
@@ -156,7 +170,10 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Full Name *
                 </label>
                 <input
@@ -170,11 +187,16 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
                   }`}
                   placeholder="Enter your full name"
                 />
-                {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
+                {errors.name && (
+                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                )}
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Email Address *
                 </label>
                 <input
@@ -188,13 +210,18 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
                   }`}
                   placeholder="Enter your email address"
                 />
-                {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                )}
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Phone Number *
                 </label>
                 <input
@@ -208,11 +235,16 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
                   }`}
                   placeholder="Enter your phone number"
                 />
-                {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
+                {errors.phone && (
+                  <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                )}
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="service"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Required Service *
                 </label>
                 <select
@@ -231,12 +263,17 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
                     </option>
                   ))}
                 </select>
-                {errors.service && <p className="mt-1 text-sm text-red-600">{errors.service}</p>}
+                {errors.service && (
+                  <p className="mt-1 text-sm text-red-600">{errors.service}</p>
+                )}
               </div>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Project Description *
               </label>
               <textarea
@@ -250,7 +287,9 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
                 }`}
                 placeholder="Please describe your project requirements..."
               />
-              {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
+              {errors.message && (
+                <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+              )}
             </div>
 
             <button
@@ -264,7 +303,7 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 
   if (isPopup) {
     return (
@@ -283,24 +322,39 @@ const ContactForm = ({ isPopup = false, onClose = null }) => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-2xl font-bold text-gray-900">Request a Quote</h3>
-            <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <h3 className="text-2xl font-bold text-gray-900">
+              Request a Quote
+            </h3>
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
           {formContent}
         </motion.div>
       </motion.div>
-    )
+    );
   }
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">{formContent}</div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

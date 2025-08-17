@@ -1,18 +1,77 @@
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import Banner from "../components/Banner";
-import ContactForm from "../components/ContactForm";
 import { siteConfig } from "../assets/config";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  // Initialize with your real public key
+  emailjs.init(import.meta.env.VITE_PUBLIC_KEY);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    if (!formData.name.trim()) return "Name is required";
+    if (!formData.email.trim()) return "Email is required";
+    if (!/\S+@\S+\.\S+/.test(formData.email)) return "Invalid email format";
+    if (!formData.message.trim()) return "Message is required";
+    return null;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+    setError("");
+    setSuccess("");
+    setLoading(true);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_KEY,
+        import.meta.env.VITE_TEMPLATE_ID, // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        }
+      )
+      .then(
+        () => {
+          setSuccess("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+          setLoading(false);
+        },
+        (err) => {
+          console.error(err);
+          setError("Something went wrong. Please try again.");
+          setLoading(false);
+        }
+      );
+  };
+
   return (
     <>
       <Helmet>
         <title>Contact Us - {siteConfig.meta.title}</title>
         <meta
           name="description"
-          content="Get in touch with  HK Builders for your next project. Contact us for a free consultation and estimate."
+          content="Get in touch with HK Builders for your next project. Contact us for a free consultation and estimate."
         />
       </Helmet>
 
@@ -25,7 +84,7 @@ const Contact = () => {
 
         {/* Contact Information */}
         <section className="py-16 bg-white">
-          <div className="  px-4 sm:px-6 lg:px-8">
+          <div className="px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {[
                 {
@@ -55,7 +114,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="flex items-center justify-center flex-col bg-gray-50 p-8 rounded-lg"
                 >
-                  <div className="text-4xl mb-4 ">
+                  <div className="text-4xl mb-4">
                     {<contact.icon size={40} />}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -73,8 +132,71 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Form */}
-        <ContactForm />
+        {/* Contact Form (same design as ContactForm) */}
+        <section className="py-16 bg-gray-50">
+          <div className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+              Send Us a Message
+            </h2>
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white p-8 rounded-xl shadow-lg space-y-6"
+            >
+              {error && (
+                <p className="text-red-600 text-center font-medium">{error}</p>
+              )}
+              {success && (
+                <p className="text-green-600 text-center font-medium">
+                  {success}
+                </p>
+              )}
+              <div>
+                <label className="block text-gray-700 font-medium mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 outline-none"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 font-medium mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 outline-none"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows="5"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 outline-none"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition disabled:opacity-50"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </form>
+          </div>
+        </section>
+
         {/* Google Map */}
         <section className="py-16 bg-gray-100">
           <div className="px-4 sm:px-6 lg:px-8">
